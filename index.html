@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Макет</title>
+	<meta charset="utf-8" />
+	<link href="css/style.css" type="text/css" rel="stylesheet"/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.tubular.1.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/index.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>    
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="contacts">
+           <table border="0">
+               <tr><td><img src="images/place.png"></td><td>Минск</td></tr>
+               <tr><td><img src="images/tel.png"></td><td>+375 (29) 193-70-41</td></tr>
+           </table>
+        </div>
+        <div id="most-ambitious">
+            <p>Самый масштабный</p>
+            <p>квест-перформанс Беларуси</p>
+        </div>
+        <div id="central-name">
+            <img src="images/main-name.png">
+        </div>
+        <div id="central-descr">
+            <div id="soon">скоро</div>
+            <div id="time">весна 2017</div>
+        </div>
+        <div id="form-desc">
+            <p>Оставьте свои данные для</p> 
+            <p>записи на тестовые игры</p>
+          </div>
+        <div id="form-place">
+           <div id="form">
+            <form onsubmit="return validate();">
+               <label class="inputname">
+                <input required="1" type="text" id="inputname" >  
+                <div class="placeholder_name">ВАШЕ ИМЯ<span>*</span></div>
+                </label>
+                <label class="inputtel">
+                <input required="1" type="text" id="inputtel">
+                <div class="placeholder_tel">ВАШ ТЕЛЕФОН<span>*</span></div>
+                </label>
+                <input type="submit" alt="Отправить" class="form-button" onclick="validate(this.form)">
+            </form>
+            </div>
+        </div>
+        <div id="logo-md"> 
+             <a href="/"><img src="images/logo-mad-cops.png"></a>
+         </div>
+         <div id="bottom-content">
+              <table> 
+                  <tr><td><a href="https://qplay.by"><img src="images/logo-quest-play.png"></a></td>
+                   <td><a href="https://minsk.claustrophobia.com/ru/quest"><img src="images/logo-claus.png"></a></td>
+                    <td><a href="http://re-quest.by"><img src="images/logo-request.png"></a></td></tr>
+               </table>
+           </div>
+           <div id="contacts2">
+               <p>для почтовых отправлений</p>
+                <p>quest@madcops.by</p>
+           </div>
+    </div>
+    
+    <script>       
+    function validate(){
+       var name = document.getElementById("inputname");
+       var tel = document.getElementById("inputtel");
+       
+       if(!name.value){
+           name.style.border = "3px solid red";
+           return false;
+       }
+        
+        if(!tel.value){
+           tel.style.border = "3px solid red";
+                return false;
+        }
+            return true;
+    }
+                                
+    </script>
+    
+</body>
+</html>
+
